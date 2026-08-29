@@ -248,6 +248,35 @@ footer{
 }
 footer p{
     margin-top:8px;
+} 
+    /* IMAGE POPUP */
+
+.image-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    z-index:2000;
+    justify-content:center;
+    align-items:center;
+}
+
+.image-modal img{
+    max-width:95%;
+    max-height:90%;
+    object-fit:contain;
+}
+
+.image-modal span{
+    position:absolute;
+    top:15px;
+    right:25px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
 }
 /* MOBILE */
 @media(max-width:700px){
@@ -418,5 +447,21 @@ and to make a difference wherever we can.
 © 2026 Bayt al-ʿĀfiyah Foundation & Clinic. All Rights Reserved.
 </p>
 </footer>
+
+<div id="imageModal" class="image-modal">
+    <span onclick="closeImage()">&times;</span>
+    <img src="flood-relief.JPG">
+</div>
+
+<script>
+function openImage() {
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
 </body>
 </html>

@@ -119,21 +119,25 @@ nav a:hover{
     line-height:1.8;
 }
 /* FLOOD PHOTO */
-.photo-placeholder{
-    margin-top:25px;
-    height:280px;
-    border-radius:15px;
-    background:#eef2f7;
-    border:2px dashed #b9c3d0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+
+.flood-photo{
+    margin-top:30px;
     text-align:center;
-    color:#687585;
-    font-size:17px;
 }
-.photo-placeholder span{
-    max-width:500px;
+
+.flood-photo img{
+    width:100%;
+    max-width:950px;
+    max-height:500px;
+    object-fit:contain;
+    border-radius:16px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.3s ease;
+}
+
+.flood-photo img:hover{
+    transform:scale(1.01);
 }
 /* STATISTICS */
 .stats{
@@ -338,13 +342,16 @@ communities should not have to face difficult times alone.
 <p>Household items & utensils</p>
 </div>
 </div>
-<!-- PHOTO PLACEHOLDER -->
-<div class="photo-placeholder">
-<span>
-Your flood-relief photo collage will be placed here.
-<br>
-You can replace this area with your photographs later.
-</span>
+<!-- FLOOD RELIEF PHOTO -->
+
+<div class="flood-photo">
+
+    <img src="flood-relief.jpg"
+
+         alt="Bayt al-ʿĀfiyah flood relief support"
+
+         onclick="openImage()">
+
 </div>
 </section>
 <!-- EDUCATION -->

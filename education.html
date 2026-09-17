@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Education Hub | Bayt al-ʿĀfiyah Foundation</title>
+
 <style>
 * {
     margin: 0;
@@ -11,10 +13,12 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background: #f8f9fb;
     color: #333;
 }
+
 /* Header */
 header {
     background: #0B3D91;
@@ -24,6 +28,7 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -31,32 +36,39 @@ nav {
     max-width: 1200px;
     margin: auto;
 }
+
 nav h2 {
     font-size: 24px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
+    transition: 0.3s;
 }
+
 nav a:hover {
     color: #D4AF37;
 }
+
 /* Hero */
 .education-hero {
     background: linear-gradient(
-        rgba(11,61,145,0.90),
-        rgba(11,61,145,0.90)
+        rgba(11,61,145,0.92),
+        rgba(11,61,145,0.92)
     );
     color: white;
     text-align: center;
     padding: 90px 20px;
 }
+
 .education-hero h1 {
     font-size: 48px;
     margin-bottom: 18px;
 }
+
 .education-tagline {
     color: #FFD700;
     font-size: 23px;
@@ -64,80 +76,121 @@ nav a:hover {
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
+
 .education-hero p {
     max-width: 750px;
     margin: auto;
     font-size: 18px;
     line-height: 1.8;
 }
+
 /* Main Section */
 .education-section {
     max-width: 1200px;
     margin: auto;
     padding: 70px 20px;
 }
+
 .section-title {
     text-align: center;
     margin-bottom: 45px;
 }
+
 .section-title h2 {
     color: #123b63;
     font-size: 36px;
     margin-bottom: 12px;
 }
+
 .section-title p {
     color: #666;
     font-size: 17px;
 }
-/* Resource Cards */
+
+/* Resource Grid */
 .education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    display: flex;
+    justify-content: center;
 }
+
+/* Breast Cancer Card */
 .education-card {
     background: white;
+    width: 100%;
+    max-width: 500px;
     padding: 30px;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
     transition: all 0.3s ease;
 }
+
 .education-card:hover {
     transform: translateY(-7px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
-.education-icon {
-    font-size: 45px;
-    margin-bottom: 18px;
+
+/* Card Image */
+.resource-image {
+    width: 100%;
+    max-width: 260px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    display: block;
 }
-.education-card h3 {
-    color: #0B3D91;
-    font-size: 22px;
+
+/* Icon */
+.education-icon {
+    font-size: 42px;
     margin-bottom: 12px;
 }
+
+/* Card Title */
+.education-card h3 {
+    color: #0B3D91;
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+/* Card Description */
 .education-card p {
     color: #666;
     line-height: 1.7;
     margin-bottom: 20px;
 }
-/* Coming Soon */
-.coming-soon {
-    opacity: 0.85;
+
+/* Resource Buttons */
+.resource-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
 }
-.coming-soon-badge {
+
+.resource-btn {
     display: inline-block;
-    background: #f1f1f1;
-    color: #666;
-    padding: 7px 15px;
+    background: #0B3D91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
+
+.resource-btn:hover {
+    background: #D4AF37;
+    transform: translateY(-2px);
+}
+
 /* Back Button */
 .back-btn {
     display: inline-block;
-    margin-top: 45px;
+    margin-top: 50px;
     background: #0B3D91;
     color: white;
     text-decoration: none;
@@ -146,9 +199,11 @@ nav a:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .back-btn:hover {
     background: #D4AF37;
 }
+
 /* Footer */
 footer {
     background: #0B3D91;
@@ -157,121 +212,184 @@ footer {
     padding: 30px 20px;
     margin-top: 30px;
 }
+
 footer p {
     margin-top: 8px;
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    nav h2 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .education-hero {
+        padding: 65px 20px;
+    }
+
+    .education-hero h1 {
+        font-size: 36px;
+    }
+
+    .education-tagline {
+        font-size: 18px;
+    }
+
+    .education-hero p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .education-card {
+        padding: 25px 20px;
+    }
+
+    .resource-buttons {
+        flex-direction: column;
+    }
+
+    .resource-btn {
+        width: 100%;
+    }
+}
 </style>
 </head>
+
 <body>
+
+<!-- Header -->
 <header>
 <nav>
 <h2>Bayt al-ʿĀfiyah</h2>
+
 <div>
 <a href="index.html">Home</a>
 </div>
+
 </nav>
 </header>
+
+
 <!-- Education Hero -->
 <div class="education-hero">
+
 <h1>Education Hub</h1>
+
 <div class="education-tagline">
 Learn • Understand • Empower
 </div>
+
 <p>
 Accessible health education and awareness resources designed to help
 individuals and communities learn, understand health issues, and make
 informed decisions about their wellbeing.
 </p>
+
 </div>
+
+
 <!-- Education Resources -->
 <section class="education-section">
+
 <div class="section-title">
-<h2>Explore Our Resources</h2>
+
+<h2>Educational Resources</h2>
+
 <p>
-Educational materials from Bayt al-ʿĀfiyah Foundation
+Explore health education materials from Bayt al-ʿĀfiyah Foundation.
 </p>
+
 </div>
+
+
 <div class="education-grid">
-<!-- Health Awareness -->
+
+<!-- Breast Cancer Awareness -->
 <div class="education-card">
-<div class="education-icon">🩺</div>
-<h3>Health Awareness</h3>
+
+<img
+src="breast-cancer.jpg"
+alt="Breast Cancer Awareness"
+class="resource-image"
+>
+
+<div class="education-icon">
+🎗️
+</div>
+
+<h3>
+Breast Cancer Awareness
+</h3>
+
 <p>
-Learn about important health conditions, prevention,
-early recognition, and healthy practices through
-accessible educational materials.
+Learn about breast cancer, including risk factors, signs and symptoms,
+screening, early detection, treatment, common myths, and the importance
+of awareness.
 </p>
-<span class="coming-soon-badge">
-Coming Soon
-</span>
+
+
+<!-- PDF & Video Buttons -->
+<div class="resource-buttons">
+
+<a
+href="breast-cancer.pdf"
+target="_blank"
+class="resource-btn"
+>
+📄 View PDF
+</a>
+
+<a
+href="breast-cancer.mp4"
+target="_blank"
+class="resource-btn"
+>
+▶ Watch Video
+</a>
+
 </div>
-<!-- Educational Presentations -->
-<div class="education-card">
-<div class="education-icon">📚</div>
-<h3>Educational Presentations</h3>
-<p>
-Explore educational presentations covering health,
-disease prevention, public health, and community
-wellbeing.
-</p>
-<span class="coming-soon-badge">
-Coming Soon
-</span>
+
 </div>
-<!-- Educational Videos -->
-<div class="education-card">
-<div class="education-icon">🎥</div>
-<h3>Educational Videos</h3>
-<p>
-Watch accessible educational videos created to
-communicate important health information in a
-simple and engaging way.
-</p>
-<span class="coming-soon-badge">
-Coming Soon
-</span>
+
 </div>
-<!-- Public Health -->
-<div class="education-card">
-<div class="education-icon">🌍</div>
-<h3>Public Health Resources</h3>
-<p>
-Explore resources related to public health,
-prevention, community health, and global health
-topics.
-</p>
-<span class="coming-soon-badge">
-Coming Soon
-</span>
-</div>
-<!-- Future AI -->
-<div class="education-card coming-soon">
-<div class="education-icon">🤖</div>
-<h3>AI Learning Assistant</h3>
-<p>
-An interactive learning feature designed to help
-users explore health topics and understand
-educational materials.
-</p>
-<span class="coming-soon-badge">
-Future Feature
-</span>
-</div>
-</div>
+
+
+<!-- Back to Home -->
 <center>
+
 <a href="index.html" class="back-btn">
 ← Back to Home
 </a>
+
 </center>
+
 </section>
+
+
+<!-- Footer -->
 <footer>
-<h3>Bayt al-ʿĀfiyah Foundation & Clinic</h3>
+
+<h3>
+Bayt al-ʿĀfiyah Foundation & Clinic
+</h3>
+
 <p>
 Hope • Humanity • Health
 </p>
+
 <p>
 © 2026 Bayt al-ʿĀfiyah Foundation. All Rights Reserved.
 </p>
+
 </footer>
+
 </body>
 </html>

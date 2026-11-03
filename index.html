@@ -215,38 +215,50 @@ section {
     margin: auto;
 }
 
-/* MISSION CARDS */
+/* A VISION INTO ACTION */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
-    margin-top: 25px;
+.vision-section {
+    max-width: 100%;
+    background: var(--white);
+    padding: 65px 25px;
+    margin: auto;
 }
 
-.card {
-    background: white;
-    padding: 21px;
-    border-radius: 12px;
-    border: 1px solid #E8EDF2;
-    box-shadow: 0 4px 14px rgba(16, 24, 40, .05);
-    transition: .25s ease;
+.vision-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 18px rgba(16, 24, 40, .08);
+.vision-content .section-heading {
+    margin-bottom: 22px;
 }
 
-.card h3 {
-    color: var(--blue);
-    font-size: 18px;
-    margin-bottom: 9px;
+.vision-content .section-heading h2 {
+    color: var(--navy);
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
-.card p {
-    font-size: 14px;
+.vision-content p {
     color: var(--text);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 17px;
+}
+
+.vision-content .vision-intro {
+    color: var(--blue);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.vision-content .vision-closing {
+    color: var(--green);
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 0;
+    letter-spacing: .3px;
 }
 
 /* LEADERSHIP */
@@ -629,7 +641,7 @@ footer a:hover {
         padding: 9px 19px;
     }
 
-    /* Sections and cards */
+    /* Sections */
 
     section,
     .leadership,
@@ -646,8 +658,7 @@ footer a:hover {
     }
 
     .team-container,
-    .members-grid,
-    .cards {
+    .members-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
@@ -658,20 +669,31 @@ footer a:hover {
         padding: 18px;
     }
 
-    .card {
-        padding: 18px;
-    }
-
-    .card h3 {
-        font-size: 16px;
-    }
-
     .category-title {
         margin-top: 15px;
     }
 
     .category-title h2 {
         font-size: 19px;
+    }
+
+    /* Vision section */
+
+    .vision-section {
+        padding: 43px 20px;
+    }
+
+    .vision-content .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .vision-content p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .vision-content .vision-intro {
+        font-size: 15px;
     }
 
     /* Volunteer section */
@@ -713,7 +735,7 @@ footer a:hover {
     <h2>Bayt al-ʿĀfiyah</h2>
     <div>
         <a href="#">Home</a>
-        <a href="#mission">Mission</a>
+        <a href="#mission">Our Vision</a>
         <a href="#team">Our Team</a>
         <a href="#contact">Contact</a>
     </div>
@@ -750,39 +772,30 @@ footer a:hover {
     </div>
 </div>
 
-<!-- MISSION -->
+<!-- A VISION INTO ACTION -->
 
-<section id="mission">
-    <div class="section-heading">
-        <h2>Our Mission</h2>
-        <p>Connecting healthcare, knowledge and humanitarian action to support stronger communities.</p>
+<section id="mission" class="vision-section">
+
+    <div class="vision-content">
+
+        <div class="section-heading">
+            <h2>A Vision into Action</h2>
+        </div>
+
+        <p class="vision-intro">
+            Bayt al-ʿĀfiyah was established through the shared vision of a group of friends committed to advancing community wellbeing and contributing to positive social change.
+        </p>
+
+        <p>
+            United by a common sense of responsibility, we came together to transform our shared values into purposeful action. Our aim is to support meaningful initiatives, address community needs and ensure that our collective efforts translate into tangible, positive outcomes.
+        </p>
+
+        <p class="vision-closing">
+            Driven by purpose. United by humanity. Committed to meaningful change.
+        </p>
+
     </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Community Healthcare</h3>
-            <p>Promoting accessible healthcare, health awareness and community wellbeing.</p>
-        </div>
-
-        <div class="card">
-            <h3>Research & Knowledge Advancement</h3>
-            <p>
-                Promoting research-driven healthcare solutions through evidence,
-                innovation, future research publications and knowledge exchange.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Disaster Relief & Humanitarian Aid</h3>
-            <p>
-                Supporting individuals and families through emergency relief,
-                essential supplies, food assistance and humanitarian support
-                during times of crisis and hardship.
-            </p>
-        </div>
-
-    </div>
 </section>
 
 <!-- LEADERSHIP -->

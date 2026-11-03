@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +34,7 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* HEADER AND NAVIGATION */
 
 header {
     background: var(--navy);
@@ -90,6 +89,7 @@ nav a:hover {
 
 .hero-content {
     max-width: 850px;
+    width: 100%;
 }
 
 .hero-logo {
@@ -286,7 +286,7 @@ section {
     border-bottom: 2px solid var(--gold);
 }
 
-/* ALL TEAM CARDS */
+/* TEAM CARDS */
 
 .doctor-card,
 .member-card {
@@ -333,13 +333,15 @@ section {
     margin-bottom: 13px;
 }
 
-.doctor-card h5 {
+.doctor-card h5,
+.member-card h5 {
     color: var(--navy);
     font-size: 14px;
     margin: 12px 0 5px;
 }
 
-.doctor-card ul {
+.doctor-card ul,
+.member-card ul {
     padding-left: 18px;
     text-align: left;
     line-height: 1.55;
@@ -513,60 +515,121 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* MOBILE */
+/* TABLET */
 
-@media (max-width: 650px) {
-    header {
-        padding: 12px 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    nav h2 {
-        font-size: 20px;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 13px;
-    }
-
+@media (min-width: 651px) and (max-width: 900px) {
     .hero {
-        min-height: 650px;
-        padding: 35px 18px;
-    }
-
-    .hero-logo {
-        width: 105px;
-        height: 105px;
+        min-height: 65vh;
     }
 
     .hero h1 {
-        font-size: 29px;
+        font-size: 34px;
+    }
+
+    .hero-logo {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    /* Navigation: title above links */
+
+    header {
+        padding: 12px 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+    }
+
+    nav h2 {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    nav div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    /* Shorter homepage image section */
+
+    .hero {
+        min-height: 0;
+        height: auto;
+        padding: 42px 18px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-logo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 14px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+        margin-bottom: 6px;
     }
 
     .tagline {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 1.5px;
+        margin-bottom: 12px;
     }
 
     .hero-description {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+        margin-top: 12px;
     }
 
     .primary-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 9px;
         width: 100%;
     }
 
     .primary-buttons .btn {
         width: 100%;
         max-width: 270px;
+        padding: 10px 16px;
+        font-size: 13px;
     }
+
+    .journey-btn {
+        font-size: 13px;
+        padding: 9px 19px;
+    }
+
+    /* Sections and cards */
 
     section,
     .leadership,
@@ -578,20 +641,66 @@ footer a:hover {
         font-size: 24px;
     }
 
+    .section-heading p {
+        font-size: 14px;
+    }
+
     .team-container,
     .members-grid,
     .cards {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .doctor-card,
     .member-card {
         max-width: 360px;
+        padding: 18px;
     }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .category-title {
+        margin-top: 15px;
+    }
+
+    .category-title h2 {
+        font-size: 19px;
+    }
+
+    /* Volunteer section */
 
     .join-us {
         margin: 30px 12px;
         padding: 32px 18px;
+    }
+
+    .join-us h2 {
+        font-size: 24px;
+    }
+
+    .join-us p {
+        font-size: 13px;
+    }
+
+    /* Contact and footer */
+
+    #contact {
+        padding: 42px 18px;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 25px 15px;
     }
 }
 </style>
